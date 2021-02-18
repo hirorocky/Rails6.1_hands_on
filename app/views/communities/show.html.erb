@@ -1,4 +1,7 @@
+<%= link_to '←戻る', communities_path %>
 <h1><%= @community.title %></h1>
+
+<%= link_to 'コメントする', new_community_comment_path(@community) %>
 
 <% @comments.each do |comment| %>
   <div>
