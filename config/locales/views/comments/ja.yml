@@ -1,0 +1,5 @@
+ja:
+  comments:
+    new:
+      title: '%{community_title} / コメント投稿'
+      submit: '投稿'

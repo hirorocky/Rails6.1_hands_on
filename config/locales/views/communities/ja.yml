@@ -1,0 +1,11 @@
+ja:
+  communities:
+    new:
+      title: 'コミュニティ作成'
+      submit: '作成'
+    index:
+      title: 'コミュニティ一覧'
+      link_to_new: 'コミュニティ作成'
+    show:
+      title: '%{title}'
+      link_to_new_comment: 'コメントする'
