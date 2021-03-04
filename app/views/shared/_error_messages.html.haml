@@ -1,0 +1,8 @@
+- if object.errors.present?
+  .card.mb-2.border-danger
+    .card-header.bg-danger.text-white
+      エラーがあります
+    .card-body
+      %ul
+        - object.errors.each do |e|
+          %li= e.full_message

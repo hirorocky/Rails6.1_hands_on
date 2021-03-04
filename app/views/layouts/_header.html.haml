@@ -12,3 +12,16 @@
         %li.nav-item
           = link_to new_community_path, class: 'nav-link' do
             コミュニティを作る
+      .d-flex
+        -if current_user
+          .nav-item.dropdown
+            %a.nav-link.text-white.dropdown-toggle#navbarDropdownMenuLink{href: "#", role: "button", "data-bs-toggle": "dropdown", "aria-expanded": "false"}
+              = current_user.email
+            %ul.dropdown-menu{"aria-labelledby": "navbarDropdownMenuLink"}
+              %li
+                = link_to t('header.to_user_edit'), edit_user_path(current_user.id), class: 'dropdown-item'
+              %li
+                = link_to t('header.to_logout'), :logout, method: :post, class: 'dropdown-item'
+        - else
+          = link_to t('header.to_register'), new_user_path, class: 'btn btn-primary me-2'
+          = link_to t('header.to_login'), :login, class: 'btn btn-secondary'

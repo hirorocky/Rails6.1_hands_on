@@ -1,0 +1,8 @@
+ja:
+  users:
+    new:
+      title: ユーザー新規作成
+      submit: 作成
+    edit:
+      title: ユーザー設定
+      submit: 変更
