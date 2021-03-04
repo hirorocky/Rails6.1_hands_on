@@ -10,6 +10,10 @@
     = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
   %body
     = render '/layouts/header'
+    - if flash[:notice]
+      .alert.alert-info.m-2= flash[:notice]
+    - if flash[:alert]
+      .alert.alert-warning.m-2= flash[:alert]
     .container-fluid.pt-4.px-4
       = yield
 
