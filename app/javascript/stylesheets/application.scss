@@ -1,4 +1,6 @@
-@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
 
 $primary: #9400d9;
 @import "bootstrap";
+@import "trix/dist/trix";
+@import "actiontext.scss";
