@@ -12,3 +12,6 @@ import "../stylesheets/application"
 
 Rails.start()
 Turbolinks.start()
+
+require("trix")
+require("@rails/actiontext")
