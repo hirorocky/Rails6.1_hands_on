@@ -11,9 +11,15 @@
         .card
           .card-body
             %h4= community.title
-            %div= t('activerecord.attributes.community.owner_name') + '：' + community.owner_name
-            .d-flex.justify-content-between
-              %div= t('activerecord.attributes.community.created_at') + '：' + l(community.created_at)
+            .small.text-muted= t('activerecord.attributes.community.owner_name') + '：' + community.owner_name
+            .small.text-muted= t('activerecord.attributes.community.created_at') + '：' + l(community.created_at)
+            .d-flex.justify-content-between.align-items-end.mt-2
+              %div
+                .small 最新のコメント投稿：
+                - author_name, created_at = community.comments.order(created_at: :desc).pick(:author_name, :created_at)
+                .small
+                  %span= author_name
+                  %span= '(' + l(created_at) + ')'
               = link_to community_path(community) do
                 %i.fas.fa-arrow-right
                 中に入る
