@@ -1,5 +1,9 @@
 ja:
-  comments:
+  text_comments:
     new:
-      title: '%{community_title} / コメント投稿'
+      title: '%{community_title} / テキストコメント投稿'
+      submit: '投稿'
+  emoji_comments:
+    new:
+      title: '%{community_title} / 絵文字コメント投稿'
       submit: '投稿'

@@ -8,4 +8,5 @@ ja:
       link_to_new: 'コミュニティ作成'
     show:
       title: '%{title}'
-      link_to_new_comment: 'コメントする'
+      link_to_new_text_comment: 'テキストコメントする'
+      link_to_new_emoji_comment: '絵文字コメントする'

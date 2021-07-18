@@ -5,13 +5,19 @@
 
 .container
   %h1= t('.title', title: @community.title)
-  = link_to new_community_comment_path(@community), class: 'btn btn-primary' do
+  = link_to new_community_text_comment_path(@community), class: 'btn btn-primary' do
     %i.fas.fa-comment
-    = t('.link_to_new_comment')
+    = t('.link_to_new_text_comment')
+  = link_to new_community_emoji_comment_path(@community), class: 'btn btn-primary ms-1' do
+    %i.fas.fa-smile
+    = t('.link_to_new_emoji_comment')
 
   %ul.list-group.mt-4
     - @comments.each do |comment|
       %li.list-group-item
         .fs-5= comment.author_name
         .fs-6.mb-3= l(comment.created_at, format: :long)
-        .fs-6= comment.content
+        - if comment.text?
+          .fs-6= comment.text.text_content
+        - else
+          .fs-1= comment.emoji.emoji_type

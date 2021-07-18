@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :users
 
   resources :communities, only: %i[index new create show] do
-    resources :comments, only: %i[new create]
+    resources :text_comments, only: %i[new create]
+    resources :emoji_comments, only: %i[new create]
   end
 end
