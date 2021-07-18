@@ -19,7 +19,7 @@
                 - author_name, created_at = community.comments.order(created_at: :desc).pick(:author_name, :created_at)
                 .small
                   %span= author_name
-                  %span= '(' + l(created_at) + ')'
+                  %span= '(' + l(created_at) + ')' if created_at.present?
               = link_to community_path(community) do
                 %i.fas.fa-arrow-right
                 中に入る
