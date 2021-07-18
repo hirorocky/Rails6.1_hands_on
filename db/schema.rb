@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_13_080310) do
+ActiveRecord::Schema.define(version: 2021_07_13_074300) do
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
@@ -55,12 +55,23 @@ ActiveRecord::Schema.define(version: 2021_03_13_080310) do
     t.integer "community_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "content_type", null: false
+    t.bigint "content_id", null: false
     t.index ["community_id"], name: "index_comments_on_community_id"
   end
 
   create_table "communities", force: :cascade do |t|
     t.string "title"
     t.string "owner_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "emojis", force: :cascade do |t|
+    t.integer "emoji_type", default: 0, null: false
+  end
+
+  create_table "texts", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

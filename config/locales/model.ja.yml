@@ -12,8 +12,9 @@ ja:
         comment:
           id: ID
           author_name: 投稿者
-          content: 内容
           created_at: 投稿日時
+          text_content: 内容
+          emoji_type: 絵文字
         user:
           id: ID
           email: メールアドレス
