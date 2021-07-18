@@ -1,5 +1,7 @@
 %h1= t('.title')
 = form_with model: @community do |form|
+  = render 'shared/error_messages', object: form.object
+
   = form.label :title, class: 'form-label'
   = form.text_field :title, class: 'form-control mb-2'
   = form.label :owner_name, class: 'form-label'
